@@ -1,18 +1,12 @@
 /* ヘッダータイトル */
 .header-title { /* 右の緑文字 */
-  color: #070;
-  text-align: left;
+  color: #12C;
+  text-align: center;
   line-height:2vx;
   padding-top:30px;
   padding-left:30px;
   padding-bottom:2px;
   font-weight: bold; /* bold太字　lighter細字　normal戻す */
-}
-.header-title span {/* 左の文字 */
-  color:#12C;
-}  
-.header-title p {
-  text-align:right;
 }
 /* ヘッダータイトル ここまで */
 
@@ -109,6 +103,9 @@ a {
 /* タブレット向けレイアウト *//* 要らない気がする */
 /* ブレイクポイントをmax-width: 1000pxに指定 */
 @media(max-width: 1000px){
+  .header-title{
+    font-size:11px;
+  }
   .child {
     width:50%;
   }
@@ -116,6 +113,9 @@ a {
 /* スマートフォン向けレイアウト *//* スマホ版だと写真が大きくなるように設定した */
 /* ブレイクポイントをmax-width: 590pxに指定 */
 @media(max-width: 590px){/* 600pxだとPCでギリアウト */
+  .header-title{
+    font-size:9px;
+  }
   #parent {
     width: 100%;/* 元々660px */
     margin: 0 auto;
