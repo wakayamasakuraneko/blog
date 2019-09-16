@@ -1,0 +1,156 @@
+/* ヘッダータイトル */
+.header-title { /* 右の緑文字 */
+  color: #070;
+  text-align: left;
+  line-height:2vx;
+  padding-top:30px;
+  padding-left:30px;
+  padding-bottom:2px;
+  font-weight: bold; /* bold太字　lighter細字　normal戻す */
+}
+.header-title span {/* 左の文字 */
+  color:#12C;
+}  
+.header-title p {
+  text-align:right;
+}
+/* ヘッダータイトル ここまで */
+
+#mainBox {
+    width: 85%;/* 元々640px */
+    margin: 0 auto;/* 元々 margin: 0 auto; */
+}
+#parent {
+    width: 100%;/* 元々660px */
+    margin-right: -20px;/* 元々 margin-right: -20px; */ /* なぜか margin-bottom を上げてもヘッダーとの差が広がるのみ */
+}
+#parent .child {/* イメージとタイトル、その下の文字まで含む */
+    width: 240px;/* 元々200px */
+    margin-left: 2vw;/* 元々、margin-leftは無かった */
+    margin-right: 0vw;/* 元々20px */
+    /* margin-rightとleftを1vwずつにするとスマホ版でも丁度良さそう */
+    margin-bottom: 20px;/* 元々20px */
+    float: left;
+    min-height:260px;/* 最低260の高さが無いと、PCで画面を縮めた時、箱がズレる(何の事かはやってみれば分かる) */
+    display: inline;    /*for ie*/
+    font-size: 12px;
+    margin-bottom:-100px;
+    padding-bottom:100px;
+/* ↑この2行が無いと、フッターがコンテンツに被る */
+}
+#parent .child .img {/* 写真や、色の付いたイメージの大きさと色と下のマージン */
+    width: 240px;/* 箱の幅 *//* 元々200px */
+    height: 180px;/* 箱の高さ *//* 元々120px */
+    background-color: #52D3FF;/* 箱の色指定 */
+}
+#parent .child .title {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+#parent .child .read {/* 文字の部分を変えるCSS(必要なら) */
+}
+
+#parent .child span {/* 日付の色とフォントサイズ */
+  font-size:12px;
+  color:green;
+}
+
+a {
+  text-decoration: none;/* リンクの下線を打ち消す */
+}/* ここの閉じ括弧が無い事に気付かないばかりに丸一日フッターが画面下に出ない事に悩んだ */
+
+
+
+/* Footer */
+#Footer {
+  width:100%; /* 横幅を100%に */
+  background:#fdfdcd;/* 元々#DAFFDA */
+  position: fixed;/* fixedしないとフッターが上に浮く */
+  bottom: 0;/* ボトムは0にしないとフッターが上に浮く */
+  height: 70px;
+  }
+#Footer .inner {
+    width:70%;
+    min-height:60px;
+    margin:0 auto;
+    background:#fefde0;/* 元々#7BF469 */
+    text-align:center;
+  }
+.footer-right a {
+  margin-top: 20px;
+  text-decoration: none;
+  font-size:18px;
+}
+
+.home-btn {/* スペイクリニックさくらねこ　ホームページへ */
+  font-size:50px;/* ここで文字の大きさ指定しても意味無し変化なし */
+  padding: 3px 15px;
+  background-color: #ffc90d;/* HOME文字の背景色 オレンジ */
+  color: white;/* 文字色 */
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;/* ボタンに丸みを */
+  margin-right: 10px;
+  margin-top: 10px; /* 意味なさそう */
+  margin-bottom: 0px; /* 意味なさそう */
+}
+.home-btn:hover {
+  opacity: 1;
+}
+.icon {/* 三毛猫のアイコン */
+  width:25px;
+  height:25px;
+  position: relative;
+  top: 0px;
+  right: 0px;
+}
+
+
+/* タブレット向けレイアウト *//* 要らない気がする */
+/* ブレイクポイントをmax-width: 1000pxに指定 */
+@media(max-width: 1000px){
+  .child {
+    width:50%;
+  }
+}
+/* スマートフォン向けレイアウト *//* スマホ版だと写真が大きくなるように設定した */
+/* ブレイクポイントをmax-width: 590pxに指定 */
+@media(max-width: 590px){/* 600pxだとPCでギリアウト */
+  #parent {
+    width: 100%;/* 元々660px */
+    margin: 0 auto;
+  }
+
+  #parent .child {
+    max-width: 50%; /* 画像を中央寄せしたかったが、効いてなさそう・・・ */
+    /* margin: 0 auto; これを有効にしてしまうと、おかしくなる */
+  }
+
+  #parent .child .img {
+    width: 300px;/* 箱の幅 *//* 元々200px */
+    height: 220px;/* 箱の高さ *//* 元々120px */
+    margin: 0 auto;
+  }
+
+.footer-right a {
+  font-size:12px;
+}
+.btn {/* スマホ版：箱が大きくなった分、クリック出来る範囲を広くするつもりだったが、HTMLでbtnを消したので、必要なくなった */
+/* padding[上下] [左右]; */
+  padding:
+   100px/* 箱の高さの半分でなぜOKなのかは上と下に半分ずつだから */
+   150px/* 箱の幅の半分でなぜOKなのかは上と下に半分ずつだから */;
+  color:white;
+  display:inline-block;
+  opacity:0.8;
+}
+
+.icon {/* 三毛猫のアイコン */
+  width:20px;
+  height:20px;
+  position: relative;
+  top: 0px;
+  right: 0px;
+}
+
+}  
