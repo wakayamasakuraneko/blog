@@ -1,4 +1,11 @@
 /* ヘッダータイトル */
+.header-icon {
+  width:40px;
+  height:40px;
+  position: relative;
+  top: 5px;
+  right: 0px;
+}
 .header-title {
   font-size:2.5vw;
   color: #12C;
@@ -111,7 +118,10 @@ a {
 /* スマートフォン向けレイアウト *//* スマホ版だと写真が大きくなるように設定した */
 /* ブレイクポイントをmax-width: 590pxに指定 */
 @media(max-width: 590px){/* 600pxだとPCでギリアウト */
-    .header-title{
+  .header-icon {
+    display:none;/* 画面を小さくすると消える様に設定 */
+}
+  .header-title{
     font-size:18px;
     }
   #parent {
