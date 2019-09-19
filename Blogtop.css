@@ -111,6 +111,9 @@ a {
 /* タブレット向けレイアウト *//* 要らない気がする */
 /* ブレイクポイントをmax-width: 1000pxに指定 */
 @media(max-width: 1000px){
+  .header-icon {
+    display:none;/* 画面を小さくすると消える様に設定 */
+}
   .child {
     width:50%;
   }
@@ -118,9 +121,6 @@ a {
 /* スマートフォン向けレイアウト *//* スマホ版だと写真が大きくなるように設定した */
 /* ブレイクポイントをmax-width: 590pxに指定 */
 @media(max-width: 590px){/* 600pxだとPCでギリアウト */
-  .header-icon {
-    display:none;/* 画面を小さくすると消える様に設定 */
-}
   .header-title{
     font-size:18px;
     }
