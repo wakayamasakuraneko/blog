@@ -4,7 +4,7 @@
   <meta charset="UTF-8N"><!-- 「UTF-8」がBOM付き、「UTF-8N」がBOM無し　らしいが意味が分からない -->
   <title>猫ちゃんを入れる洗濯ネットについて</title>
   <link rel="shortcut icon" href="img_icon.ico"><!-- ファビコンの設定 -->
-  <link rel="stylesheet" href="Blogtop.css">
+  <!-- <link rel="stylesheet" href="blog004.css"> -->
 </head>
 
 <div class="parent">
@@ -12,19 +12,19 @@
   <h2 class="title">猫ちゃんを入れる洗濯ネットについて<span>   　2019/8月</span></h2>
   <div class="img001"><img src=https://raw.githubusercontent.com/wakayamasakuraneko/picture.repository/master/sentaku_net01.jpg class="sentaku_net" alt="sentaku_net"></div>
     
-    <p><!--font-size:2vw-->十分に慣れていて抱っこが出来る猫ちゃんは写真の様な洗濯ネットに入れて来て頂けると大変助かります。</p>
+    <p><!-- font-size:2vw -->十分に慣れていて抱っこが出来る猫ちゃんは写真の様な洗濯ネットに入れて来て頂けると大変助かります。</p>
     <p>理想的な洗濯ネットの条件は２つ</p>
     <p><span>１．目が粗く、中の猫ちゃんの様子を外から確認出来る物</span></p>
     <p><span>２．猫ちゃんを入れても十分ゆとりのある大きさがある</span></p>
     <p>です。</p>
     <p>逆に、</p>
-    <p><span>目が細かすぎて、外から中の様子を確認出来ない。</span></p>
-    <p><span>洗濯ネットが小さすぎて窮屈になってしまう</span></p>
+    <p><b>目が細かすぎて、外から中の様子を確認出来ない。</b></p><!-- bタグもspanとして使える事に驚き -->
+    <p><b>洗濯ネットが小さすぎて窮屈になってしまう</b></p>
     <p>という場合は無理して入れて来なくても大丈夫です。</p>
     <p>100均ならどこでも手に入ります。写真は見本ですが、この位の目の粗さと大きさがあれば十分です。</p>
 
   <div class="homestyle-btn">
-    <a href="index.html" class="home-btn">ブログ トップへ</a>
+    <a href="index.html" class="home-btn"><img class="icon" src="icon_mikeneko512px.png"> ブログ トップへ <img class="icon" src="icon_sakura.png"><!-- 三毛猫と桜のマークの間に文字を挟む --></a>
      <!-- 参考：違うページの途中に飛ぶ方法 -->
      <!-- https://saruwakakun.com/html-css/reference/link_jump#section2 -->
   </div>
@@ -37,65 +37,105 @@
 </div><!-- class="child" -->
 </div><!-- class="parent" -->
 
-
 <style type="text/css">
-
-.sentaku_net_img { /* 写真の大きさ */
-  margin-left:5vw;
-  height:600px;
-  width:400px;
-}
+/* スマホ版 */
 .parent{
+  background: #fdfdcd; /* 元々#eee(灰色) 薄卵色(濃さ)#eee183>#fdfdcd>fefde0>#fffbf5 タイトルのオレンジ#ffc90d */
   width: 100%;
   min-height: 200px;
-  background: #fdfdcd; /* 元々#eee(灰色) 薄卵色(濃さ)#eee183>#fdfdcd>fefde0>#fffbf5 タイトルのオレンジ#ffc90d */
-  margin: 0 auto;
+  margin: 0 auto; /* 意味無い？ */
   padding: 30px;
   box-sizing: border-box; /* このコードが無いと画面から文字がはみ出て横スクロールが必要になる */
 }
 .child{
-  min-height:120px;
-  width:100%;
   background:#fefde0;
+  width:90%; /* 最も薄い黄色は親要素の卵色に対して90%でこれは画面の伸縮しても維持できる */
+  min-height:120px;
+  padding-left:5%; /*  */
+  padding-right:5%; /*  */
 }
 .title{
-  font-size:3vw
+  font-size:4vw; /* ★★PCでは 30px★★ */
 }
 .title span{
   color:green;
-  font-size:18px;
+  font-size:4vw; /* ★★PCでは 24px★★ */
 }
 .child p{
-  font-size:2vw
+  font-size:4vw; /* ★★PCでは 2vw★★ */
 }
-.child p span{
-  font-weight:600;
+.child p span{ /* 赤い太字 */
   color:red;
+  font-weight:400; /* 600だったが太いかなと思って400にしてみた */
 }
+.child p b{
+  color:#FF8C00; /*  */
+  font-weight:400; /* 400より下でも変わらず */
+}
+.sentaku_net { /* タイトルの写真 */
+  margin-left:2vw;
+  width: 70vw; /* ★★PCでは45vw★★ */
+}
+
 .homestyle-btn{text-align:center; /* ※　追加記載  中央揃え */ 
 }
+a {
+  text-decoration: none;/* リンクの下線を打ち消す */
+}
 .home-btn {
-  font-size:20px;
-  padding: 3px 15px;
-  background-color: #00bb00;/* HOME文字の背景色 黄緑 */
+  font-size:6vw; /* ★★PCでは 35px★★ */
+  background-color: #ffc90d;/* HOME文字の背景色 オレンジ */
   color: white;/* 文字色 */
   display: inline-block;
   opacity: 0.8;
   border-radius: 4px;/* ボタンに丸みを */
+  padding: 3px 15px;
   margin-right: 20px;
-  margin-top: 10px; /* ★★★★★ */
-  margin-bottom: 15px; /* ★★ スマホ版だと画面下が白く空いてしまうので仕方なくボトムを長く取った ★★ */
+  margin-top: 10px; /*  */
+  margin-bottom: 10vw; /* スマホ版だと画面下が白く空いてしまうので仕方なくボトムを長く取った  */
+}
+.home-btn:hover {
+  opacity: 1; /* ブログトップへのボタンにホバーすると透明度0.8が解除 */
+}
+.icon {/* 三毛猫と桜のアイコン */
+  margin-bottom:-0.5vw; /* この微妙なmargin-bottomがまた絶妙 */
+  width:6vw; /* ★★PCでは35px★★ */
+  height:6vw; /* ★★PCでは35px★★ */
 }
 
+/* PC版 */
+@media(min-width: 985px){ /* PC版 *//* 1000近くを超えないとスマホ版から逃げれない */
 
-/* タブレット向けレイアウト */
-@media (max-width: 700px) {
 .title{
-  font-size:18px
+  font-size:30px; /* ★★スマホでは 4vw★★ */
+}
+.title span{
+  color:green;
+  font-size:24px; /* ★★スマホでは 4vw★★ */
+}
+.child{
+  text-align:left; /* 一度centerにしたら、戻らなくなったので、仕方なくleft指定した */
 }
 .child p{
-  font-size:15px
-}
+  font-size:2vw; /* ★★スマホでは 4vw★★ */
 }
 
+.sentaku_net { /* 写真の大きさ */
+  margin-left:5vw;
+  width: 45vw; /* ★★スマホでは70vw★★ */
+}
+.center { /* 中央気味に寄せたいテキスト */
+ /* ★★結局使用せず★★ */
+}
+
+.home-btn {
+  font-size:35px; /* ★★スマホでは 6vw★★ */
+  margin-bottom: 4vw; /* ★★スマホ版：10vw★★  */
+}
+.icon {/* 三毛猫と桜のアイコン */
+  margin-bottom:-3px;/* margin-bottomがをマイナスで入れないとアイコンがちょっと浮く */
+  width:35px; /* ★★スマホでは 6vw★★ */
+  height:35px; /* ★★スマホでは 6vw★★ */
+}
+}
 </style>
