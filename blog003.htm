@@ -4,21 +4,20 @@
   <meta charset="UTF-8N"><!-- 「UTF-8」がBOM付き、「UTF-8N」がBOM無し　らしいが意味が分からない -->
   <title>連れて来られる際の入れ物について</title>
   <link rel="shortcut icon" href="img_icon.ico"><!-- ファビコンの設定 -->
-  <link rel="stylesheet" href="Blogtop.css">
+  <!-- <link rel="stylesheet" href="blog003.css"> -->
 </head>
 
 <div class="parent">
 <div class="child">
   <h2 class="title">連れて来られる際の入れ物について<span>   　2019/8月</span></h2>
-  <div class="img001"><img src=https://raw.githubusercontent.com/wakayamasakuraneko/picture.repository/master/pet_carry_cage_cat01.jpg class="hokakuneko_img" alt="hokakuneko"></div>
+  <div class="img001"><img src=https://raw.githubusercontent.com/wakayamasakuraneko/picture.repository/master/pet_carry_cage_cat01.jpg class="iremono_img" alt="iremono"></div>
     
     <p>理想的な入れ物は、ハードキャリー又は捕獲器です。</p>
     <p>ソフトキャリーは、チャックが開いたり壊れたり、生地の薄いところが裂けたりして、脱走する可能性があります。</p>
-    <p>キャリーの大きさは猫ちゃんを入れた時、多少ゆとりのあるサイズが理想的です。</p>
-    <p>窮屈すぎると熱がこもり過ぎて熱中症の危険があるので注意して下さい。</p>
-    
-    <div class="img"><img src=https://raw.githubusercontent.com/wakayamasakuraneko/picture.repository/master/carry_case01.jpg class="img carry_case01" alt="sakuraneko"></div>
-    <div class="img"><img src=https://raw.githubusercontent.com/wakayamasakuraneko/picture.repository/master/carry_case02.jpg class="img carry_case02" alt="hokakuneko"></div>
+    <p>キャリーの大きさは猫ちゃんを入れた時、多少ゆとりのあるサイズが理想的です。窮屈すぎると熱がこもり過ぎて熱中症の危険があるので注意して下さい。</p>
+    <br>
+    <div class="img"><img src=https://raw.githubusercontent.com/wakayamasakuraneko/picture.repository/master/carry_case01.jpg class="img carry_case01 float_img" alt="case01"></div>
+    <div class="img"><img src=https://raw.githubusercontent.com/wakayamasakuraneko/picture.repository/master/carry_case02.jpg class="img carry_case02 float_img" alt="case02"></div>
 
   <div class="clear"></div>
 
@@ -29,7 +28,7 @@
 
 
   <div class="homestyle-btn">
-    <a href="index.html" class="home-btn">ブログ トップへ</a>
+    <a href="index.html" class="home-btn"><img class="icon" src="icon_mikeneko512px.png"> ブログ トップへ <img class="icon" src="icon_sakura.png"><!-- 三毛猫と桜のマークの間に文字を挟む --></a>
      <!-- 参考：違うページの途中に飛ぶ方法 -->
      <!-- https://saruwakakun.com/html-css/reference/link_jump#section2 -->
   </div>
@@ -44,86 +43,113 @@
 
 
 <style type="text/css">
-
-.hokakuneko_img { /* 写真の大きさ */
-  margin-left:5vw;
-  height:250px;
-  width:330px;
-}
+/* スマホ版 */
 .parent{
+  background: #fdfdcd; /* 元々#eee(灰色) 薄卵色(濃さ)#eee183>#fdfdcd>fefde0>#fffbf5 タイトルのオレンジ#ffc90d */
   width: 100%;
   min-height: 200px;
-  background: #fdfdcd; /* 元々#eee(灰色) 薄卵色(濃さ)#eee183>#fdfdcd>fefde0>#fffbf5 タイトルのオレンジ#ffc90d */
-  margin: 0 auto;
+  margin: 0 auto; /* 意味無い？ */
   padding: 30px;
   box-sizing: border-box; /* このコードが無いと画面から文字がはみ出て横スクロールが必要になる */
 }
 .child{
-  min-height:120px;
-  width:100%;
   background:#fefde0;
+  width:90%; /* 最も薄い黄色は親要素の卵色に対して90%でこれは画面の伸縮しても維持できる */
+  min-height:120px;
+  padding-left:5%; /*  */
+  padding-right:5%; /*  */
 }
 .title{
-  font-size:3vw
+  font-size:4vw; /* ★★PCでは 30px★★ */
 }
 .title span{
   color:green;
-  font-size:18px;
-}
-.img {
-  float: left;
-  margin-left: 2vw;/* 元々、margin-leftは無かった */
-}
-.img .carry_case01 {/* 写真や、色の付いたイメージの大きさと色と下のマージン */
-    width: 400px;/* 箱の幅 *//* 元々200px */
-    height: 300px;/* 箱の高さ *//* 元々120px */
-    margin-bottom: 20px;
-    background-color: #52D3FF;/* 箱の色指定 */
-}
-.img .carry_case02 {/* 写真や、色の付いたイメージの大きさと色と下のマージン */
-    width: 400px;/* 箱の幅 *//* 元々200px */
-    height: 300px;/* 箱の高さ *//* 元々120px */
-    background-color: #52D3FF;/* 箱の色指定 */
-}
-.clear {
-    clear:both;　/*floatの解除、これをしないと、画像の右横にテキストが並ぶ*/
+  font-size:4vw; /* ★★PCでは 24px★★ */
 }
 .child p{
-  font-size:2vw
+  font-size:4vw; /* ★★PCでは 2vw★★ */
 }
-.child p span{
-  font-weight:600;
+.child p span{ /* 赤い太字 */
   color:red;
+  font-weight:600; /*  */
 }
-/*.read p span{
-  font-weight:500;
-  color:red;
-}*/
-
+.iremono_img { /* タイトルの写真 */
+  margin-left:2vw;
+  width: 70vw; /* ★★PCでは45vw★★ */
+}
+.float_img { /* float_imgの写真の大きさ */
+  margin-left:2vw; /* ★★PCではleftを消してrightを2vw★★ */
+  width: 70vw; /* ★★PCでは35vw★★ */
+}
 .homestyle-btn{text-align:center; /* ※　追加記載  中央揃え */ 
 }
+a {
+  text-decoration: none;/* リンクの下線を打ち消す */
+}
 .home-btn {
-  font-size:20px;
-  padding: 3px 15px;
-  background-color: #00bb00;/* HOME文字の背景色 黄緑 */
+  font-size:6vw; /* ★★PCでは 35px★★ */
+  background-color: #ffc90d;/* HOME文字の背景色 オレンジ */
   color: white;/* 文字色 */
   display: inline-block;
   opacity: 0.8;
   border-radius: 4px;/* ボタンに丸みを */
+  padding: 3px 15px;
   margin-right: 20px;
-  margin-top: 10px; /* ★★★★★ */
-  margin-bottom: 15px; /* ★★ スマホ版だと画面下が白く空いてしまうので仕方なくボトムを長く取った ★★ */
+  margin-top: 10px; /*  */
+  margin-bottom: 10vw; /* スマホ版だと画面下が白く空いてしまうので仕方なくボトムを長く取った  */
+}
+.home-btn:hover {
+  opacity: 1; /* ブログトップへのボタンにホバーすると透明度0.8が解除 */
+}
+.icon {/* 三毛猫と桜のアイコン */
+  margin-bottom:-0.5vw; /* この微妙なmargin-bottomがまた絶妙 */
+  width:6vw; /* ★★PCでは35px★★ */
+  height:6vw; /* ★★PCでは35px★★ */
 }
 
+/* PC版 */
+@media(min-width: 985px){ /* PC版 *//* 1000近くを超えないとスマホ版から逃げれない */
 
-/* タブレット向けレイアウト */
-@media (max-width: 700px) {
 .title{
-  font-size:18px
+  font-size:30px; /* ★★スマホでは 4vw★★ */
+}
+.title span{
+  color:green;
+  font-size:24px; /* ★★スマホでは 4vw★★ */
+}
+.child{
+  text-align:left; /* 一度centerにしたら、戻らなくなったので、仕方なくleft指定した */
 }
 .child p{
-  font-size:15px
-}
+  font-size:2vw; /* ★★スマホでは 4vw★★ */
 }
 
+.iremono_img { /* 写真の大きさ */
+  margin-left:5vw;
+  width: 45vw; /* ★★スマホでは70vw★★ */
+}
+.float_img { /* float_imgの写真の大きさ */
+  float:left;
+  margin-left:0vw; /* ★★スマホでは2vw★★ */
+  margin-right:2vw;
+  width:35vw;
+  margin-bottom:10px;
+}
+.clear {
+    clear:both;　/*floatの解除、これをしないと、画像の右横にテキストが並ぶ*/
+}
+.center { /* 中央気味に寄せたいテキスト */
+ /* ★★結局使用せず★★ */
+}
+
+.home-btn {
+  font-size:35px; /* ★★スマホでは 6vw★★ */
+  margin-bottom: 4vw; /* ★★スマホ版：10vw★★  */
+}
+.icon {/* 三毛猫と桜のアイコン */
+  margin-bottom:-3px;/* margin-bottomがをマイナスで入れないとアイコンがちょっと浮く */
+  width:35px; /* ★★スマホでは 6vw★★ */
+  height:35px; /* ★★スマホでは 6vw★★ */
+}
+}
 </style>
