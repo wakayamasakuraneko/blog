@@ -10,6 +10,7 @@ body {
   background:#ffffe9;
   border: 10px solid #fdfdcd;
   box-sizing: border-box;
+  font-family: 'Noto Sans JP', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 /* 参考：display: flex;でカラム落ちさせる */
