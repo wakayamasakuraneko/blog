@@ -31,7 +31,6 @@ Footer
   .icon {
     margin-bottom: -3px;
     width: 35px;
-    height: 35px;
   }
   
 /* ======================
@@ -41,13 +40,13 @@ Footer
   
   /* 三毛猫と桜のアイコンスマホ */
   .icon {
-    width:4vw;
-    height:4vw;
+    width:20px;
     margin-bottom: -0.5vw;
   }
 
   /* スマホ */
   .home-btn {
+    font-size: 20px;
     padding: 10px 15px;
   }
 
