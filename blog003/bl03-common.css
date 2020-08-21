@@ -1,0 +1,128 @@
+/* ==========================
+共通
+========================== */
+
+body {
+  display: block;
+  margin: 0px;
+  /* width:100%; */
+  /* background:#faddee; */
+  background:#ffffe9;
+  border: 10px solid #fdfdcd;
+  box-sizing: border-box;
+}
+
+/* 参考：display: flex;でカラム落ちさせる */
+/* https://qiita.com/vocal_IBUKI/items/3ed95845339b9f4a3cf1 */
+#soto {
+  width: 99%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding:20px;
+  /* background:#e4ebf8; */
+  background:#ffffe9;
+  /* display: inline-block; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* イメージとタイトル、その下の文字まで含む */
+.flex-wrap {
+  display: block;
+  background:#e3ffe9;
+  /* border : 1px solid; */
+  /* box-sizing: border-box; */
+  width: 400px;
+  padding:1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 20px;
+  position: relative;
+  /* float: left; 親要素で、flex-wrap: wrap;でカラム落ちさせているので必要無くなった */
+}
+.float-x{
+  width: 94%;
+  position: absolute;
+  margin-top:5%;
+  z-index: 5;
+  opacity: 50%;
+}
+.x{
+  width: 100%;
+}
+.box-top{
+  /* width: 100%; */
+  font-size:20px;
+  margin:0 auto;
+  background:#96f1aa;
+  text-align: center;
+  border-radius: 10px;
+}
+.box-bottom{
+  /* width: 100%; */
+  margin:0 auto;
+  position: relative;
+  /* background:#c0cbff; */
+}
+
+/* 画像の上に重なるテキスト */
+.box-inner-top {
+  width: 95%;
+  position: absolute;
+  padding:10px;
+  bottom:10em;
+  z-index: 10;
+  text-align: center;
+  color:#ffffff;
+  text-shadow: 0px 1px 0 rgb(255, 0, 0),  0-1px 0 rgb(255, 0, 0), -1px 0 0 rgb(255, 0, 0), 1px 0 0 rgb(255, 0, 0);
+  /* opacity: 50%; */
+}
+.img01 {
+  /* position: absolute; */
+  width: 100%;
+}
+.box-inner-bottom {
+  background:#ffffff;
+  min-height: 4em;
+  /* position: absolute; */
+}
+
+
+/*floatの解除、これをしないと、画像の右横にテキストが並ぶ*/
+.clear {
+  clear:both;
+}
+
+.non-float-box {
+  /* background:#96f1aa; */
+  text-align: center;
+  font-size: 25px;
+  width: 80%;
+  margin : 0 auto;
+  margin-top:50px;
+}
+.non-float-img {
+  width: 40%;
+  margin : 0 auto;
+}
+
+p {
+  font-size: 25px;
+}
+
+/* ======================
+スマホ用
+========================*/
+@media screen and (max-width: 769px) {
+  .non-float-box {
+    font-size:18px
+  }
+  .non-float-img {
+    width: 100%;
+  }
+  p {
+    font-size:16px
+  }
+}
