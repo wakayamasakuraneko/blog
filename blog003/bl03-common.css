@@ -34,7 +34,7 @@ body {
   background:#e3ffe9;
   /* border : 1px solid; */
   /* box-sizing: border-box; */
-  width: 370px;
+  width: 400px;
   padding:1%;
   margin-left: 1%;
   margin-right: 1%;
@@ -69,6 +69,7 @@ body {
 
 /* 画像の上に重なるテキスト */
 .box-inner-top {
+  font-size:18px;
   width: 95%;
   position: absolute;
   padding:10px;
@@ -84,6 +85,8 @@ body {
   width: 100%;
 }
 .box-inner-bottom {
+  font-size: 17px;
+  min-height: 5em;
   background:#ffffff;
   min-height: 4em;
   /* position: absolute; */
