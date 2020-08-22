@@ -1,0 +1,43 @@
+/* ========================
+差別化
+========================= */
+
+/* .sotoのもう一つのクラス */
+.NG {
+  background:#a7b4cc;
+  display: table;
+}
+
+/* .sotoのもう一つのクラス */
+.OK {
+  background:#ffffe9;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* .utiのもう一つのクラス */
+.float {
+  width: 350px;
+  float: left; 
+}
+
+/* .utiのもう一つのクラス */
+.flex {
+  width: 400px;
+  /* float: left; 親要素で、flex-wrap: wrap;でカラム落ちさせているので必要無くなった */
+}
+/* ========================
+スマホ用
+========================= */
+@media screen and (max-width: 769px) {
+
+  .NG{
+    /* display: table; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  /* .float {float: left; }があっても↑のコードのお陰でなんか色々解決した */
+}
+
