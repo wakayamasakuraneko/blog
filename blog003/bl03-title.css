@@ -24,5 +24,6 @@ Header
   box-sizing: border-box;
 }
 
-
-
+.caption span {
+  font-family: serif;
+}
