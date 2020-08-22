@@ -24,6 +24,7 @@ Header
   box-sizing: border-box;
 }
 
+  /* アンドロイドでは激おこになるので書体で変えれるかと思ったが… */
 .caption span {
   font-family: serif;
 }
