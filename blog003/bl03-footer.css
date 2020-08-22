@@ -2,7 +2,7 @@
 Footer
 ============================== */
 
-.homestyle-btn {
+footer {
   text-align: center;
 }
 
@@ -17,7 +17,6 @@ Footer
   padding: 3px 15px;
   margin-top: 10px;
   margin-bottom: 4vw;
-  /* margin-bottom: 10vw; スマホ版だと画面下が白く空いてしまうので仕方なくボトムを長く取った  */
 }
 
 
@@ -26,8 +25,7 @@ Footer
 }
 
   /* 三毛猫と桜のアイコンPC */
-  /* アイコンが存在しないとネガティブマージンが効かないので焦った */
-  /* 普通のマージンだとアイコンが無くても効くのが嫌らしい */
+  /* アイコンが存在しないとネガティブマージンが効かない様に見えるので焦った */
   .icon {
     margin-bottom: -3px;
     width: 35px;
