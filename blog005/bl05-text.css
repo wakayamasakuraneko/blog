@@ -17,6 +17,11 @@ p {
   margin-block-end: 0em;
 }
 
+p span {
+  color: red;
+  font-weight: bold;
+}
+
 p.orange {
   color: orange;
   font-weight: 400;
