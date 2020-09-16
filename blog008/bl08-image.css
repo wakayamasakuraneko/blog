@@ -1,0 +1,44 @@
+/* PC版 */
+
+.blog_pic {
+  margin-left: 5vw;
+  width: 50vw;
+}
+
+.blog_pic_01 {
+  margin-left: 2vw;
+  width: 70vw;
+}
+
+.blog_pic_02 {
+  margin-left: 2vw;
+  width: 45vw;
+}
+
+.flower_icon {
+  /* 花アイコン */
+  margin-bottom: -3px;
+  width: 25px;
+  color: rgb(59, 207, 72);
+}
+
+@media screen and (max-width: 769px) {
+  /* スマホ用 */
+  .blog_pic {
+    margin-left: 0;
+    width: 100%;
+  }
+  .blog_pic_01 {
+    margin-left: 0;
+    width: 100%;
+  }
+  .blog_pic_02 {
+    margin-left: 0;
+    width: 100%;
+  }
+  .flower_icon {
+    /* 花アイコン */
+    margin-bottom: -0.5vw;
+    width: 5vw;
+  }
+}
