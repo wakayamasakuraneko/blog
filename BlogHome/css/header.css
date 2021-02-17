@@ -1,0 +1,58 @@
+/* PC */
+
+.header-icon {
+  /* 5枚の桜の花びら */
+  position: relative;
+  width: 50px;
+  top: 10px;
+}
+
+header {
+  color: #440c0c;
+  text-align: center;
+  font-weight: bold;
+  /* margin-bottom: 30px; */
+  font-size: 24px;
+}
+
+header p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* .header-title b1 {
+  display: inline;
+  タイトルを１行にする（スマホ版で消えていたb1を表示する）
+} */
+
+header b2 {
+  display: none;
+  /* PCでは2行目は見せない */
+}
+
+.header-bottom {
+  height: 20px;
+}
+
+@media screen and (max-width: 769px) {
+  .header-icon {
+    /* 5枚の桜の花びら */
+    width: 30px;
+    top: 10px;
+  }
+  header {
+    font-size: 4vw;
+    font-size: 18px;
+  }
+  header b1 {
+    display: none;
+    /* スマホでは消す */
+  }
+  header b2 {
+    display: inline;
+    /* 2行目、スマホでは表示 */
+  }
+  .header-bottom {
+    height: 0px;
+  }
+}
