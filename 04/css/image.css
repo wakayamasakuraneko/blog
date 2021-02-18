@@ -1,11 +1,11 @@
-img {
+.img001 {
   /* 写真の大きさ */
   margin-left: 5vw;
   width: 40vw;
 }
 
 @media screen and (max-width: 769px) {
-  img {
+  .img001 {
     /* タイトルの写真 */
     width: 90%;
   }
