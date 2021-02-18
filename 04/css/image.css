@@ -1,11 +1,11 @@
-.img001 {
+.LaundryNet {
   /* 写真の大きさ */
   margin-left: 5vw;
   width: 40vw;
 }
 
 @media screen and (max-width: 769px) {
-  .img001 {
+  .LaundryNet {
     /* タイトルの写真 */
     width: 90%;
   }
