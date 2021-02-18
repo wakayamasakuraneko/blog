@@ -59,7 +59,7 @@ span {
     /* イメージとタイトル、その下の文字まで含む */
     width: calc(100% - 2vw);
     margin: 3vw;
-    font-size: 4vw;
+    font-size: 5vw;
   }
   span {
     /* 日付の色とフォントサイズ */
