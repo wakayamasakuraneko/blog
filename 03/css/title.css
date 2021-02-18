@@ -1,0 +1,30 @@
+/* ============================
+Header
+============================ */
+
+  .header-title {
+    font-size:30px;
+    /* background:#fdfdcd; */
+    text-align: center;
+    font-weight: bold;
+    margin:20px;
+  }  
+
+  .header-title span {
+    color: green;
+    font-size: 24px;
+  }
+
+  .caption {
+    font-size: 26px;
+    font-weight: bold;
+    color: #a52a2a;
+    background:#edeea3;
+    padding-left: 5%;
+    box-sizing: border-box;
+  }
+
+  /* アンドロイドでは激おこになるので書体で変えれるかと思ったが… */
+  .caption span {
+    font-family: serif;
+  }
