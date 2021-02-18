@@ -66,4 +66,7 @@ span {
     /* スマホ */
     font-size: 4vw;
   }
+  .article-title {
+    margin-block-start: 0.5em;
+  }
 }
