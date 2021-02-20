@@ -41,7 +41,7 @@ div.center {
   .vw_img {
     width: 600px;
   }
-  .vw_img.small_img {
+  .small_img {
     width: 500px;
   }
   .flex-wrap {
