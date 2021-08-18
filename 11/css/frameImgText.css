@@ -37,7 +37,7 @@
 @media screen and (max-width: 769px) {
   /* スマホ用 */
   .frameText {
-    font-size: 22px;
+    font-size: 20px;
   }
   /* .frameText span {
     font-size: 20px;
