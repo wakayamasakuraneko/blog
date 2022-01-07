@@ -1,0 +1,48 @@
+/* =======================
+表
+======================== */
+
+/* PC版 */
+
+table {
+  text-align: center;
+  border: 3px #eee183 solid;
+  background: #fdfdcd;
+  /* ここで指定した背景色は表全体に反映されるが、以下で個別に指定した物は反映されない */
+  margin-left: auto;
+  margin-right: auto;  
+  table-layout: fixed;
+  /* 表の幅を固定、文字数が多ければ、折り返して表示 */
+  /* width: 300px; */
+  /* 料金表の幅を画面の90%に固定 */
+  border-collapse: collapse;
+  /* border-collapseは線の間に隙間を作るかどうかを決めるCSSのプロパティ */
+  /* border-collapseは線の間に隙間を消すコード */
+}
+.column1{
+  background: #fff39c ;
+}
+td {
+  border: 1px #eee183 solid;
+  /* table-layout: fixed; */
+	padding: 5px 20px 5px 20px
+	/* width: 30px; */
+	/* height: 25px; */
+}
+
+table span {
+  color: red;
+  font-size: 80%;
+}
+.even {
+	background: #fbf8f0;
+}
+.odd {
+	background: #fefcf9;
+}
+
+
+@media screen and (max-width: 769px) {
+  /* スマホ用 */
+
+}
