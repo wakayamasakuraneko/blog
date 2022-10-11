@@ -1,0 +1,53 @@
+/* =======================
+テキスト
+======================== */
+
+.header-title {
+  font-size: 28px;
+  /* background:#fdfdcd; */
+  text-align: center;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.date {
+  text-align: end;
+  color: green;
+  font-size: 24px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #a52a2a;
+  background: #edeea3;
+  /* padding-left: 5%; */
+  box-sizing: border-box;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  border-radius: 10px;
+  width: 95%;
+  margin: auto;
+}
+
+p {
+  font-size: 25px;
+}
+
+/* スマホ用 */
+
+@media screen and (max-width: 769px) {
+  p {
+    font-size: 16px
+  }
+}
+
+/* @media screen and (max-width: 769px) {
+
+  span {
+    display: none;
+  }
+} */
