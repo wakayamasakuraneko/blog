@@ -1,21 +1,68 @@
 /* =======================
 テキスト
 ======================== */
+.headerdisplay {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-left: 0;
+}
+
+.headerdisplay li {
+  width: 30%;
+}
+
+.irasutoban {
+  font-weight: bold;
+  text-align: center;
+  color: #c91515;
+  font-size: 20px;
+  /* font-family: 'Noto Sans JP', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; */
+  /* font-family: "MS Mincho"; */
+}
+
+.shasinban {
+  text-align: inherit;
+  font-size: 18px;
+}
+
+.link06 {
+  padding: 5px 5px 5px 13px;
+  text-decoration: none;
+  background: #c23b3b;
+  /* transition: background-color 0.5s; */
+  color: aliceblue;
+  border-radius: 5px;
+}
+
+.link06:hover {
+  background: #c23b3bb8;
+  /* transition: background-color 0.3s; */
+  color: #000000;
+}
+
+p {
+  font-size: 25px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
 
 .header-title {
   font-size: 28px;
   /* background:#fdfdcd; */
   text-align: center;
   font-weight: bold;
-  margin: 20px;
+  /* margin: 20px; */
 }
+
 
 .date {
   text-align: end;
   color: green;
   font-size: 24px;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
 }
 
 h2 {
@@ -33,15 +80,40 @@ h2 {
   margin: auto;
 }
 
-p {
-  font-size: 25px;
-}
 
 /* スマホ用 */
 
 @media screen and (max-width: 769px) {
-  p {
-    font-size: 16px
+
+  .headerdisplay {
+    flex-direction: column;
+  }
+
+  .headerdisplay li {
+    width: auto;
+  }
+
+  .header-title {
+    font-size: 24px;
+  }
+
+  .irasutoban {
+    font-size: 18px;
+  }
+
+  .date {
+    font-size: 18px;
+  }
+
+  .shasinban {
+    font-size: 16px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .link06 {
+    padding: 3px 3px 3px 6px;
+    background: #ce6464;
   }
 }
 
