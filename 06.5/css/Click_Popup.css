@@ -54,6 +54,9 @@
     align-items: center;
     justify-content: center;
     animation: blinkBorder 2s ease infinite running;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 
@@ -83,13 +86,8 @@
     }
 }
 
-.anime {
-    font-weight: bold;
-    text-align: center;
+.textPhoto {
     animation: blinkcolor 2s ease infinite running;
-    margin: 0 auto;
-    text-decoration: none;
-    font-size: 20px;
 }
 
 /* 指マーク */
@@ -144,4 +142,13 @@
 
 .lb::after {
     transform: rotate(315deg);
+} */
+
+/* .anime {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    animation: blinkcolor 2s ease infinite running;
+    margin: 0 auto;
 } */
