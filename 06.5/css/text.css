@@ -1,6 +1,5 @@
-/* =======================
-テキスト
-======================== */
+/* テキスト */
+
 .headerdisplay {
   display: flex;
   list-style: none;
@@ -20,8 +19,6 @@
   text-align: center;
   color: #c91515;
   font-size: 20px;
-  /* font-family: 'Noto Sans JP', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; */
-  /* font-family: "MS Mincho"; */
 }
 
 .shasinban {
@@ -33,7 +30,6 @@
   padding: 5px 5px 5px 13px;
   text-decoration: none;
   background: #c23b3b;
-  /* transition: background-color 0.5s; */
   color: aliceblue;
   border-radius: 5px;
   display: inline-block;
@@ -45,7 +41,6 @@ span {
 
 .link06:hover {
   background: #c23b3bb8;
-  /* transition: background-color 0.3s; */
   color: #000000;
 }
 
@@ -57,12 +52,9 @@ p {
 
 .header-title {
   font-size: 28px;
-  /* background:#fdfdcd; */
   text-align: center;
   font-weight: bold;
-  /* margin: 20px; */
 }
-
 
 .date {
   text-align: end;
@@ -76,7 +68,6 @@ h2 {
   font-weight: bold;
   color: #a52a2a;
   background: #edeea3;
-  /* padding-left: 5%; */
   box-sizing: border-box;
   margin-block-start: 0em;
   margin-block-end: 0em;
