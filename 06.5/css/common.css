@@ -1,11 +1,8 @@
-/* 参考：display: flex;でカラム落ちさせる */
-/* https://qiita.com/vocal_IBUKI/items/3ed95845339b9f4a3cf1 */
+/* common */
 
 body {
   display: block;
   margin: 0px;
-  /* width:100%; */
-  /* background:#faddee; */
   background: #ffffe9;
   border: 10px solid #fdfdcd;
   box-sizing: border-box;
@@ -34,7 +31,7 @@ body {
 }
 
 #uti {
-  width: 500px;
+  max-width: 450px;
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
@@ -54,13 +51,8 @@ ul.flx34 {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-shadow: 0 0 8px 5px #ffffff, 0 0 5px 5px #0e6f2e68 inset;
-  /* box-shadow: 5px 5px 5px 5px #236537; */
-  /* box-shadow: 5px -5px #7fae79, -5px 5px #7fae79, 5px 5px #09411a, -5px -5px #09411a; */
   border-radius: 3em 1em 4em 1.4em/1.4em 4em 1em 3em;
-  /* background-color: #d7acac; */
-  /* border-radius: 10px; */
-  /* height: 500px; */
-  /* border: 10px solid #09411a; */
+  z-index: 1;
 }
 
 ul.flx34 li {
@@ -72,7 +64,6 @@ ul.flx34 li {
 /* 画像のコマ */
 ul.flx34 li:nth-of-type(1) {
   margin: auto;
-  /* background-color: #9be3ab; */
 }
 
 /* 画像の下の文字コマ */
@@ -83,8 +74,6 @@ ul.flx34 li:nth-of-type(2) {
   box-shadow: 0 0 3px 2px #0e6f2e68, 0 0 4px 5px #ffffff inset;
   background-color: #ffffff;
   border-radius: 10px;
-  /* border-radius: 3em 1em 4em 1.4em/1.4em 4em 1em 3em; */
-  /* margin: auto auto 1% auto; */
 }
 
 /* 新聞紙でもOKの枠のみ */
@@ -99,12 +88,10 @@ ul.shadow {
   position: relative;
 }
 
-
-
-
 @media screen and (min-width: 1100px) {
 
-  ul.flx34 {
+  /* ul.flx34 { */
+  .row {
     max-width: 450px;
   }
 
@@ -122,9 +109,7 @@ ul.shadow {
   }
 }
 
-/* ======================
-スマホ用
-========================*/
+/* スマホ用 */
 
 @media screen and (max-width: 769px) {
 
@@ -132,7 +117,6 @@ ul.shadow {
     flex-direction: column;
     -webkit-flex-direction: column;
   }
-
 }
 
 @media screen and (max-width: 769px) {
@@ -149,9 +133,9 @@ ul.shadow {
     margin: auto;
   }
 
-  ul.flx34 li.TextAlign {
+  /* ul.flx34 li.TextAlign {
     text-align: justify;
-  }
+  } */
 
 }
 
@@ -168,131 +152,3 @@ ul.shadow {
   }
 
 }
-
-
-
-
-/* 以下没集 */
-
-/* #uti {
-  display: block;
-  background: #e3ffe9;
-  border: 1px solid;
-  box-sizing: border-box;
-  padding: 1%;
-  margin-left: 1%;
-  margin-right: 1%;
-  margin-bottom: 20px;
-} */
-
-/* margin-bottom: 1em; */
-/* background:#e4ebf8; */
-/* background: #a4a472; */
-/* background: #ffffe9; */
-
-/* #soto.column {
-  background: #dacab3;
-} */
-/* background: #a9854f; */
-
-/* .box-text {
-  font-size: 20px;
-  text-align: center;
-  margin: 0 auto;
-  bottom: 0;
-  box-sizing: border-box;
-  border: thick double #a01e1e;
-  background-color: #8feb8c;
-} */
-
-/* .box-pic {
-  margin: 0 auto;
-} */
-
-/* .box-top {
-  font-size: 20px;
-  margin: 0 auto;
-  background: #96f1aa;
-  text-align: center;
-  border-radius: 10px;
-} */
-
-/* .box-bottom {
-  margin: 0 auto;
-  position: relative;
-  background:#c0cbff;
-} */
-
-
-/* .bottom0 {
-  position: absolute;
-  width: 96%;
-  border: 1px solid;
-  box-sizing: border-box;
-  bottom: 5%;
-} */
-
-
-/* .img01 {
-  position: absolute;
-  background-color: rgb(186, 202, 79);
-  width: 100%;
-} */
-
-/* position: absolute; */
-/* .box-inner-bottom {
-  background: #ffffff;
-  font-size: 17px;
-  min-height: 5em;
-} */
-
-/* .non-float-box {
-  text-align: center;
-  font-size: 25px;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 50px;
-} */
-
-
-/* .luminous {
-  box-sizing: border-box;
-  border: solid 10px #2f00ff;
-  border-radius: 50%;
-  width: 15%;
-  height: 27%; 
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  width: 30px;
-  box-sizing: border-box;
-  border-radius: 50%;
-} */
-
-/* .imgHidden:active {
-  transition: transform 0.3s;
-  opacity: 0;
-} */
-
-/* .imgHidden {
-  opacity: 1;
-} */
-
-/* .imgGrow {
-  opacity: 0;
-} */
-
-/* .imgGrow:active {
-  opacity: 1;
-  transition: transform 0.3s;
-  transform: scale(6);
-  border-radius: 5px;
-} */
-
-/* ul.radius1 {
-  border-radius: 1em 2em 1.4em 4em/4em 1.4em 3.4em 2em;
-} */
-
-/* .radius2 {
-  border-radius: 1.4em 3em 1em 4em/3em 1.4em 4em 1em;
-} */
