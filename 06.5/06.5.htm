@@ -6,14 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>捕獲器の包み方</title>
-    <link rel="shortcut icon" href="../img_icon.ico"><!-- ファビコンの設定 -->
+    <!-- <title>Modal_JS</title> -->
+    <link rel="shortcut icon" href="../img_icon.ico">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/text.css">
     <link rel="stylesheet" href="css/images.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/Click_Popup.css">
+    <link rel="stylesheet" href="css/ripple.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/luminous-lightbox@2.3.2/dist/luminous-basic.min.css"> -->
+
 </head>
 
 <body>
@@ -118,28 +120,22 @@
             <ul class="flx34 positionR">
                 <li>
                     <img class="img80" src=images/g5032.png alt="g5032">
-                    <a class="positionA" href="#sample01">
-                        <div class="textPhoto">Photo</div>
-                        <img class="imgFing" src=images/fing2.png alt="fing">
-                    </a>
-                    <a id="sample01" href="#close" class="lb">
-                        <img src="images/H008.jpg">
-                    </a>
-                </li>
-                <!-- <li>
-                    <img class="img80" src=images/g5032.png alt="g5032">
 
-                    <div class="positionA">
-                        <a href="#sample01" class="anime">
-                            Photo
-                        </a>
-                        <a id="sample01" href="#close" class="lb">
-                            <img src="images/H008.jpg">
-                        </a>
-                        <img class="imgFing" src=images/fing2.png alt="fing">
+                    <div id="modal-trigger" class="positionA modal-trigger">
+                        <div class="textPhoto">Photo</div>
+                        <img class="imgFing" src="images/fing2.png" alt="fing">
                     </div>
-                </li> -->
-                <li>
+
+
+                    <div class="modal-bg" id="modal-bg">
+                        <div class="modal" id="modal">
+                            <button class="close-btn" id="modal-close-btn">x</button>
+                            <img src="images/H008.jpg" alt="image B">
+                        </div>
+                    </div>
+
+                </li>
+                <li id="imgJ">
                     <span>⑤ 風呂敷包みで</span><span>完成！</span>
                 </li>
             </ul>
@@ -190,10 +186,6 @@
                 </li>
             </ul>
 
-
-            <!-- </div> -->
-            <!-- uti flex -->
-
         </div><!-- soto -->
     </div>
 
@@ -236,16 +228,18 @@
             <ul class="flx34 positionR">
                 <li>
                     <img class="img80" src=images/path1102.png alt="path1102">
-                    <!-- <p class="positionA">
-                        <img class="img80 imgHidden" src=images/sampleclick.png alt="sampleclick">
-                    </p> -->
-                    <a class="positionA" href="#sample02">
+                    <div id="modal-trigger2" class="positionA modal-trigger">
                         <div class="textPhoto">Photo</div>
-                        <img class="imgFing" src=images/fing2.png alt="fing">
-                    </a>
-                    <a id="sample02" href="#close" class="lb">
-                        <img src="images/IM0333.jpg">
-                    </a>
+                        <img class="imgFing" src="images/fing2.png" alt="fing">
+                    </div>
+
+                    <div class="modal-bg" id="modal-bg2">
+                        <div class="modal" id="modal2">
+                            <button class="close-btn" id="modal-close-btn2">x</button>
+                            <img src="images/IM0333.jpg" alt="IM0333">
+                        </div>
+                    </div>
+
                 </li>
                 <li>
                     <span>④ ビニール紐で</span><span>結わえて</span><span>完成！</span>
@@ -255,23 +249,23 @@
             <ul class="flx34 shadow positionR">
                 <li>
                     <img class="img80" src=images/path465.png alt="path465">
-
-                    <a class="positionA" href="#sample03">
+                    <div id="modal-trigger3" class="positionA modal-trigger">
                         <div class="textPhoto">Photo</div>
-                        <img class="imgFing" src=images/fing2.png alt="fing">
+                        <img class="imgFing" src="images/fing2.png" alt="fing">
+                    </div>
 
-                        <!-- <a class="luminous" href="images/IMG_150042.jpg">
-                            <div class="anime">Photo</div>
-                        </a> -->
-                    </a>
-                    <a id="sample03" href="#close" class="lb">
-                        <img src="images/IMG_150042.jpg">
-                    </a>
+
+                    <div class="modal-bg" id="modal-bg3">
+                        <div class="modal" id="modal3">
+                            <button class="close-btn" id="modal-close-btn3">x</button>
+                            <img src="images/IMG_150042.jpg" alt="IM0333">
+                        </div>
+                    </div>
 
                 </li>
+
                 <li>
                     <span>適当な被せ物が</span><span>無ければ、</span><span>新聞紙でもOKです。</span>
-                    <!-- （剥き出しよりマシ） -->
                 </li>
             </ul>
 
@@ -284,7 +278,7 @@
     <footer>
         <div class="shasinban">
             <a class="link06" href="https://wakayamasakuraneko.github.io/blog/06/06.htm"><i
-                    class="far fa-hand-point-right"></i> <span>参考</span><span>捕獲器の包み方【写真版】</span>
+                    class="far fa-hand-point-right"></i> <span>参考　捕獲器の包み方【写真版】</span>
             </a>
         </div>
 
@@ -297,12 +291,9 @@
         </a>
     </footer>
 
-
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/luminous-lightbox@2.3.2/dist/luminous.min.js"></script>
-    <script>
-        new LuminousGallery(document.querySelectorAll('.luminous'));
-    </script> -->
+    <script src="js/modal.js"></script>
+    <!-- <script src="js/modal2.js"></script> -->
+    <!-- <script src="js/modal3.js"></script> -->
 
 </body>
 
