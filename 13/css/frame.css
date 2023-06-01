@@ -8,44 +8,25 @@
   border-radius: 5px;
   border: 2px solid #cdc143;
   box-sizing: border-box;
-}
-
-.sticky {
-  padding: 0 1em 0 .5em;
-  position: sticky;
-  position: -webkit-sticky;
-  /* Safari用 */
-  text-align: center;
-  width: fit-content;
-  background-color: #fffe9f;
-  border: 2px solid #d7cb52;
-  border-radius: 5px;
-  top: 0px;
-  z-index: 10;
+  /* z-index: -2; */
 }
 
 h2 {
+  font-weight: bolder;
   margin-block-start: 0em;
   margin-block-end: 0em;
-}
-
-.smallFrame {
-  position: relative;
-  background: #fbffbe;
-  top: -1em;
-  left: 1em;
-  /* width: 300px; */
-  /* height: 200px; */
-  /* margin: auto; */
+  text-align: center;
+  width: fit-content;
+  height: 1.6em;
   box-sizing: border-box;
-  width: 96%;
-  border: 1px solid #bba22e;
-  padding: 10px;
   border-radius: 5px;
+  top: 0px;
+  position: relative;
+  z-index: 10;
 }
 
-.h3title {
-  position: sticky;
+.h3title,
+.h3titleB {
   text-align: center;
   width: fit-content;
   font-size: 24px;
@@ -56,6 +37,38 @@ h2 {
   border: 2px solid #cdc143;
   top: 45px;
   z-index: 5;
+}
+
+.h3titleB {
+  position: relative;
+}
+
+
+
+.specifyPosition {
+  position: relative;
+  margin-top: -3em;
+}
+
+.specifyPositionB {
+  margin-top: 1.5em;
+}
+
+.smallFrame,
+.smallFrameB {
+  background: #fbffbe;
+  box-sizing: border-box;
+  width: 96%;
+  border: 1px solid #bba22e;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  top: -1em;
+  left: 1em;
+}
+
+.smallFrameB {
+  top: 1.3em;
 }
 
 
@@ -70,6 +83,12 @@ h2 {
 
   h2 {
     font-size: 25px;
+    height: fit-content;
+  }
+
+  .h3title,
+  .h3titleB {
+    top: 40px;
   }
 }
 
@@ -85,14 +104,23 @@ h2 {
     margin: auto;
   }
 
-  .smallFrame {
-    top: -1em;
+  .smallFrame,
+  .smallFrameB {
     left: 0px;
     margin: auto;
     width: 100%;
   }
 
-  .h3title {
+  .smallFrameB {
+    top: 1em;
+  }
+
+  .smallFrame {
+    top: -1em;
+  }
+
+  .h3title,
+  .h3titleB {
     margin: auto;
   }
 }

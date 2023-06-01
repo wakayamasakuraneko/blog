@@ -19,7 +19,6 @@ footer {
   opacity: 0.8;
   border-radius: 4px;
   padding: 3px 15px;
-  /* display: inline-block; */
 }
 
 .home-btn:hover {
@@ -40,13 +39,22 @@ footer {
 
 @media screen and (max-width: 769px) {
   .home-btn {
-    /* font-size: 5vw; */
     font-size: 25px;
   }
+
   /* 三毛猫と桜のアイコン */
   .icon {
     margin-bottom: -0.5vw;
     /* width: 6vw; */
     width: 25px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .home-btn {
+    display: inline-block;
+    width: 7em;
+    border-radius: 1em;
+    padding: .7em 0;
   }
 }

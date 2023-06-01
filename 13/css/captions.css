@@ -1,0 +1,76 @@
+.hajimeni {}
+
+
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  /* Safari用 */
+}
+
+/* .hajimeni, */
+.sticky-title1 {
+  padding: 0 1em 0 .5em;
+  background-color: #fffe9f;
+  border: 2px solid #d7cb52;
+}
+
+.sticky-title2 {
+  padding: 0.1em 1em 0 0.5em;
+  /* border: 0px; */
+  border: 1px solid #000000;
+}
+
+
+.C01 {
+  /* border: 2px solid hsl(89, 45%, 60%); */
+  background: hsl(89, 45%, 60%);
+  color: rgb(0, 74, 139);
+  /* font-weight: bold; */
+  /* -webkit-text-stroke: 1px #FFF; */
+}
+
+.C02 {
+  /* border: 2px solid hsl(191, 100%, 80%); */
+  background: hsl(191, 100%, 80%);
+  color: rgb(0, 74, 139);
+  /* -webkit-text-stroke: 1px #FFF; */
+}
+
+.C03 {
+  /* border: 2px solid hsl(0, 100%, 84%); */
+  background: hsl(0, 100%, 84%);
+  color: rgb(0, 74, 139);
+}
+
+.C04 {
+  /* border: 2px solid #e9e439; */
+  background: #f0ea4b;
+  color: rgb(0, 74, 139);
+}
+
+.C05 {
+  /* border: 2px solid #b4a4fa; */
+  /* background: #b4a4fa; */
+  background: hsl(89, 45%, 60%);
+  color: rgb(0, 74, 139);
+}
+
+@media screen and (max-width: 769px) {
+  .C02b {
+    margin-left: 1em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .C02b {
+    margin: auto;
+  }
+
+  /* .C05 {
+    text-align: center;
+  } */
+
+  .sticky-title1 {
+    margin: auto;
+  }
+}
