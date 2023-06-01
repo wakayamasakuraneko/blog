@@ -21,17 +21,6 @@ p {
   padding-right: 1em;
 }
 
-.smaller {
-  font-size: 70%;
-  display: inline-block;
-}
-
-.indent2 {
-  text-indent: -2em;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
 span {
   display: inline-block;
 }
@@ -159,6 +148,7 @@ button:hover[data-tooltip]::before {
     font-size: 20px;
   }
 
+  li a,
   p {
     font-size: 24px;
   }
