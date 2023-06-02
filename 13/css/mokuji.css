@@ -59,6 +59,7 @@ li {
   pointer-events: auto;
   padding: 0 0.5em;
   border: 2px solid #666447;
+  box-sizing: border-box;
 }
 
 .button-wrapper {
@@ -74,5 +75,12 @@ li {
 @media screen and (max-width: 500px) {
   #mokuji li {
     padding: 0 0.5em 0 0;
+  }
+
+  .topButton a {
+    padding: 0.5em 0.5em;
+    border-radius: 1em;
+    border: 4px solid #666447;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 -4px 5px -2px #b19017 inset;
   }
 }
