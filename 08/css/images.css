@@ -23,22 +23,28 @@
 }
 
 @media screen and (max-width: 769px) {
-  /* スマホ用 */
-  .blog_pic {
-    margin-left: 0;
-    width: 100%;
-  }
-  .blog_pic_01 {
-    margin-left: 0;
-    width: 100%;
-  }
+
+  .blog_pic,
+  .blog_pic_01,
   .blog_pic_02 {
     margin-left: 0;
     width: 100%;
   }
+
   .flower_icon {
     /* 花アイコン */
     margin-bottom: -0.5vw;
     width: 5vw;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+
+  .blog_pic,
+  .blog_pic_01,
+  .blog_pic_02 {
+    margin-left: -5%;
+    width: 110%;
   }
 }
