@@ -1,32 +1,33 @@
-/* ブログ5・6・7と共通 */
-
 /* ==========================
 「ホームへ」ボタン周辺
 ========================== */
 
 footer {
-  /* 共通 */
   text-align: center;
-  margin-top: 10px;
+  margin-top: 1.5em;
   margin-bottom: 20px;
 }
 
 .home-btn {
   /* PC */
   font-size: 35px;
-  /* 文字の大きさ以外は共通 */
+  border: solid 2px #bb9200;
   background-color: #ffc90d;
-  color: white;
+  color: #ffffff;
+
   text-decoration: none;
   opacity: 0.8;
   border-radius: 4px;
   padding: 3px 15px;
-  /* display: inline-block; */
+  display: inline-block;
+  transition: all .3s ease-out;
 }
 
 .home-btn:hover {
-  /* 共通 */
   opacity: 1;
+  transform: scale(1.03, 1.1);
+  background-color: #e7b500;
+  /* color: white; */
 }
 
 .icon {
@@ -36,15 +37,19 @@ footer {
   width: 35px;
 }
 
+.sakuseikousin {
+  text-align: right;
+}
+
 /* ======================
 スマホ用
 ========================*/
 
 @media screen and (max-width: 769px) {
   .home-btn {
-    /* font-size: 5vw; */
     font-size: 25px;
   }
+
   /* 三毛猫と桜のアイコン */
   .icon {
     margin-bottom: -0.5vw;
