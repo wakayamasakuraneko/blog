@@ -13,9 +13,14 @@ body {
   font-family: 'Noto Sans JP', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
+span {
+  display: inline-block;
+}
+
 /* スマホ用 */
 
 @media screen and (max-width: 769px) {
+
   /* blog008は特別にpaddingを広くしborderも色着けた */
   body {
     padding: 15px;
