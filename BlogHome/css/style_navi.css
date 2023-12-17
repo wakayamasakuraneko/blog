@@ -1,0 +1,228 @@
+.header__inner {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  /* background: rgba(193, 47, 47, 0.332); */
+  background: #eee183;
+  border-bottom: 2px solid #807e7e;
+}
+
+.header__nav-area {
+  position: fixed;
+  width: 100%;
+  top: -100%;
+  z-index: 9;
+  visibility: hidden;
+  padding-top: 60px;
+  background: #000000a8;
+  /* background: #d8d8d8; */
+  /* background: #ccefe9; */
+  /* background: #000000; */
+  transition: 0.2s;
+}
+
+/* ハンバーグ押すと上からメニューが出てくる */
+.header__nav-area.-active {
+  left: 0;
+  top: 0;
+  visibility: visible;
+}
+
+.gnav {
+  padding-right: 2em;
+  padding-bottom: 3em;
+  padding-left: 1.5em;
+}
+
+.nav_list>li {
+  /* padding-bottom: 0.8em; */
+  border-bottom: 2px solid #e7e9ee;
+}
+
+.nav_list>li+li {
+  margin-top: 20px;
+}
+
+.gnavlink {
+  display: flex;
+  justify-content: flex-start;
+  /* color: #172e59; */
+  color: #ffffff;
+  font-weight: 900;
+  transition: color 0.4s;
+  font-size: 1rem;
+  /* font-size: 0.875rem; */
+  cursor: pointer;
+}
+
+.headerSpace {
+  height: 4em;
+}
+
+/* HPへの絵付きボタンスマホだと隠す */
+.blogbtn {
+  display: none;
+}
+
+/* HPへのボタン、スマホのみ表示 */
+.toHome {
+  position: absolute;
+  display: inline-block;
+  top: 2em;
+  left: 11em;
+  color: white;
+  border: 1px solid;
+  padding: 0.5em 0.3em;
+  border-radius: 2em;
+}
+
+#menu-close {
+  position: absolute;
+  display: inline-block;
+  top: 2em;
+  left: 4em;
+  color: white;
+  border: 1px solid;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  cursor: pointer;
+}
+
+.hmbg_area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#selected-genre-display {
+  position: relative;
+  right: 1em;
+  text-wrap: balance;
+  word-break: auto-phrase;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .nav_list>li {
+    padding-bottom: 0.8em;
+  }
+}
+
+
+@media only screen and (min-width: 500px) {
+  /* .PCheaderSpace {
+    height: 5em;
+    background: #fefde0;
+    background: #bec0c7;
+    position: fixed;
+    border-bottom: 1px solid rgb(148, 148, 148);
+    box-shadow: 0 0 2px 1px #585858;
+    z-index: 2;
+  } */
+
+  .toHome,
+  #menu-close {
+    display: none;
+  }
+
+  .headerSpace {
+    height: 5em;
+  }
+
+  .header__nav-area {
+    padding-top: 0px;
+  }
+
+  .nav_list {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  /* .gnavlink, */
+  .nav_list>li {
+    /* padding-bottom: 0px; */
+    border-bottom: 0px;
+  }
+
+  .js-nav-area {
+    z-index: 10;
+    position: fixed;
+    /* background: #d4cf37; */
+    background: #fefdcc;
+    max-height: 5em;
+    border-bottom: 1px solid rgb(148, 148, 148);
+    box-shadow: 0 0 2px 1px #585858;
+  }
+
+  .header__nav-area {
+    top: 0;
+    visibility: visible;
+    /* background: transparent; */
+    /* background: #10482c91; */
+    /* background: #fefde0; */
+  }
+
+  .gnav {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .gnavlink {
+    min-width: 3em;
+    max-width: 4em;
+    max-height: 1.5em;
+    font-size: 1.2rem;
+    color: black;
+    background: rgb(255, 254, 167);
+    /* background: antiquewhite; */
+    /* background: #f1df50; */
+    padding: 0.5em 3vw;
+    border-radius: 1.5em;
+    justify-content: center;
+    box-shadow: 1px 0px 3px gray, inset 0px -2px 4px #615712;
+    transition: 0.4s;
+    border: solid 2px rgb(130, 130, 130);
+  }
+
+  .gnavlink:hover {
+    background: #ffe100;
+    transform: scale(1.1, 1.1);
+    border: solid 2px rgb(0, 0, 0);
+  }
+
+  .nav_list>li+li {
+    margin-top: 0px;
+  }
+
+  /* HPへのボタンのスタイル */
+  .blogbtn {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    width: 50px;
+    box-shadow: 3px 3px 6px -2px #555;
+    border-radius: 50%;
+  }
+
+  .blogbtn div {
+    position: absolute;
+    font-weight: bold;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(255, 246, 175);
+    -webkit-text-stroke: 1.1px #1e479e;
+    letter-spacing: 1px;
+    left: 11%;
+    top: 60%;
+  }
+
+  .blogbtn:hover {
+    transform: scale(1.2);
+  }
+
+  /* HPへのマークはPCだと隠す */
+  .toHome {
+    display: none;
+  }
+}

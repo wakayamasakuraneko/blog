@@ -1,0 +1,74 @@
+body {
+  margin: 0px;
+}
+
+a {
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+ul {
+  padding-inline-start: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+.main-container {
+  /* padding: 1em 0 1em 0; */
+  /* border-right: 1vw solid #fdfdcd; */
+  /* border-left: 1vw solid #fdfdcd; */
+  min-height: 80vh;
+}
+
+.button-wrapper {
+  display: flex;
+  position: sticky;
+  top: 80%;
+  justify-content: right;
+  z-index: 1;
+  pointer-events: none;
+  width: 90%;
+  /* background: #bbe8bd70; */
+}
+
+.topButton a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: black;
+  background: #ffeb3b;
+  border: 2px solid #666447;
+  box-shadow: 1px 0px 3px gray, inset 0px -2px 4px #615712;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  pointer-events: auto;
+  padding: 0 0.5em;
+  box-sizing: border-box;
+  opacity: 0.8;
+}
+
+.topButton a:hover {
+  background: #ffd104;
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.topButton a::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f077';
+  font-size: 28px;
+}
+
+.topButton a::after {
+  content: 'TOP';
+  font-size: 15px;
+  color: #000000;
+  position: absolute;
+  top: 45%;
+  left: 24%;
+}

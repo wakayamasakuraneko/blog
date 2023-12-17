@@ -1,0 +1,90 @@
+.hmbg {
+  display: block;
+  height: 60px;
+  /* 右によせたければ↓ */
+  /* margin-left: auto; */
+  position: relative;
+  z-index: 10;
+  width: 60px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hmbg.-active .hmbg_line {
+  background-color: transparent;
+}
+
+.hmbg.-active .hmbg_line::before {
+  top: 0;
+  transform: rotate(45deg);
+  background: white;
+}
+
+.hmbg.-active .hmbg_line::after {
+  top: 0;
+  transform: rotate(-45deg);
+  background: white;
+}
+
+.hmbg.-active .hmbg_text::before {
+  color: white;
+  content: '閉じる';
+}
+
+.hmbg_line {
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: 23px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  background-color: #172e59;
+  transition: 0.4s;
+}
+
+.hmbg_line:before,
+.hmbg_line:after {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background-color: #172e59;
+  transition: inherit;
+}
+
+.hmbg_line:before {
+  top: -6px;
+}
+
+.hmbg_line:after {
+  top: 6px;
+}
+
+.hmbg_text {
+  position: absolute;
+  bottom: 6px;
+  left: 24%;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  width: 100%;
+}
+
+.hmbg_text::before {
+  content: "メニュー";
+  text-align: center;
+  /* color: white; */
+  color: #172e59;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+
+@media only screen and (min-width: 500px) {
+
+  .hmbg {
+    display: none;
+  }
+}
