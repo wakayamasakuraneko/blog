@@ -1,153 +1,244 @@
-<!-- 参考：https://nakazilab.com/boxes-lining/ -->
-<!-- 和歌山スペイ　ブログのホーム画面 -->
-<!-- 2020/09/0?　コード整理 -->
+<!-- 【2023年】ハンバーガーメニューの作り方決定版 -->
+<!-- https://baigie.me/engineerblog/definitive-hamburger-menu/ -->
 
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
   <meta charset="UTF-8">
-  <title>和歌山スペイ　ブログ</title>
+  <title>和歌山スペイ ブログ</title>
+  <!-- <title>JSﾊﾝﾊﾞｱｺ</title>練習用 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="shortcut icon" href="images/rect153b.png">練習用 -->
   <link rel="shortcut icon" href="../img_icon.ico"><!-- ファビコンの設定 -->
-  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!-- フォントオーサムの読み込み -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style_navi.css">
+  <link rel="stylesheet" href="css/stl_common.css">
+  <link rel="stylesheet" href="css/stl_hmbg.css">
+  <link rel="stylesheet" href="css/stl_acdn.css">
 
-  <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/articleBox.css">
   <link rel="stylesheet" href="css/img.css">
-  <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
+  <!-- <link rel="stylesheet" href="css/common.css"> -->
+  <!-- <link rel="stylesheet" href="css/header.css"> -->
+  <!-- <link rel="stylesheet" href="css/tuika.css"> -->
+  <!-- <link rel="stylesheet" href="css/nav.css"> -->
+
 </head>
 
 <body>
+  <header class="header">
+    <div class="PCheaderSpace"></div>
+    <div class="header__inner">
+      <div class="hmbg_area">
+        <div id="js-hmbg" class="hmbg">
+          <span class="hmbg_line"></span>
+          <span class="hmbg_text"></span>
+        </div>
+        <div id="selected-genre-display"></div>
+      </div>
+      <div class="header__nav-area js-nav-area" id="nav">
+        <nav id="js-gnav" class="gnav">
+          <ul class="nav_list">
+            <li>
+              <a class="blogbtn" href="https://wakayamasakuraneko.github.io/clinic/index.htm">
+                <img src="images/path150.png" alt="title-img">
+                <div>ホーム</div>
+              </a>
+              <span id="menu-close">閉じる</span>
+              <a class="toHome" href="https://wakayamasakuraneko.github.io/clinic/index.htm">
+                <i class="fas fa-home"></i> HPへ</i>
+              </a>
+            </li>
+            <li class="gnavlink" onclick="showAllArticles()">
+              <div>全記事</div>
+            </li>
+            <li>
+              <div class="gnavlink -acdn js-sp-acdn-trigger" onclick="showGenre('外猫')" aria-expanded='false'
+                aria-controls="acdn1">
+                外猫
+              </div>
+              <div id="acdn1" class="acdn js-acdn">
+                <div class="acd_x_btn" id="acd_x_btn">×</div>
+                <div class="acdn_list">
+                  <a href="#" class="acdn_link">
+                    <div onclick="showGenre('予約？外猫')">予約？外猫なのに？</div>
+                  </a>
+                  <a href="#" class="acdn_link">
+                    <div onclick="showGenre('捕獲器使い方')">捕獲器の使い方・注意点</div>
+                  </a>
+                  <a href="#" class="acdn_link">
+                    <div onclick="showGenre('捕獲コツ')">捕獲のコツ・小技</div>
+                  </a>
+                  <a href="#" class="acdn_link">
+                    <div onclick="showGenre('来院時')">ご来院方法</div>
+                  </a>
+                  <a href="#" class="acdn_link">
+                    <div onclick="showGenre('自宅待機')">猫と一晩過ごすなら</div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="gnavlink" onclick="showGenre('保護猫')">
+              保護猫
+            </li>
+            <li class="gnavlink" onclick="showGenre('その他')">
+              豆知識
+            </li>
 
-
-  <header>
-    <p>
-      <img class="header-icon" src="images/00.png" alt="cherry_blossom">
-      和歌山スペイクリニック さくらねこ<b1>　ブログページ</b1>
-    </p>
-    <p>
-      <b2> ブログページ</b2>
-    </p><!-- スマホとPCでb1とb2を消したり表示させたりして見せ方を変える -->
-    <div class="header-bottom"></div>
+          </ul>
+          <div id="js-focus-trap" tabindex="0"></div>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <div class="main">
-
-    <a href="../01/01.htm" class="article">
-      <img class="img" src="images/01.jpg" alt="sakuraneko">
-      <p class="article-title">
-        和歌山スペイクリニックの「スペイ」の意味とは？<span> 2019/7月</span>
-      </p>
-      <!-- <div class="read"></div> -->
-    </a>
-
-    <a href="../02/02.htm" class="article">
-      <img class="img" src="images/02.jpg" alt="20190718">
-      <p class="article-title">
-        キャンセルを申し訳ないと思わなくても大丈夫です<span> 2019/7月</span>
-      </p>
-    </a>
-
-    <a href="../03/03.htm" class="article">
-      <img class="img" src="images/03.jpg" alt="carry_case">
-      <p class="article-title">
-        連れて来られる際の入れ物について<span> 2020/8月 更新</span>
-      </p>
-    </a>
-
-    <a href="../04/04.htm" class="article">
-      <img class="img" src="images/04.jpg" alt="net">
-      <p class="article-title">
-        猫ちゃんを入れる洗濯ネットについて<span> 2019/8月</span>
-      </p>
-    </a>
-
-    <a href="../05/05.htm" class="article">
-      <img class="img" src="images/05.jpg" alt="Trap">
-      <p class="article-title">
-        捕獲器の設置方法<span> 2019/9月</span>
-      </p>
-    </a>
-
-
-    <a href="../06/06.htm" class="article">
-      <img class="img" src="images/06.png" alt="carrying">
-      <p class="article-title">
-        捕獲器で来院される際の注意補足<span> 2020/2月 更新</span>
-      </p>
-    </a>
-    
-    <a href="../06.5/06.5.htm" class="article">
-      <img class="img" src="images/06.5.png" alt="06.5">
-      <p class="article-title">
-        (イラスト版)捕獲器の包み方<span> 2022/10月</span>
-      </p>
-    </a>
-
-    <a href="../07/07.htm" class="article">
-      <img class="img" src="images/07.jpg" alt="Temperature">
-      <p class="article-title">
-        捕獲した猫の温度管理<span> 2020/2月</span>
-      </p>
-    </a>
-
-    <a href="../08/08.htm" class="article">
-      <img class="img" src="images/08.jpg" alt="tsukamaranai">
-      <p class="article-title">
-        捕まえたい日に捕まらない！<span> 2020/5月</span>
-      </p>
-    </a>
-
-    <a href="../09/09.htm" class="article">
-      <img class="img" src="images/09.jpg" alt="Assembled">
-      <p class="article-title">
-        組み立て式捕獲器の注意点<span> 2021/2月</span>
-      </p>
-    </a>
-    
-    <a href="../10/10.htm" class="article">
-      <img class="img" src="images/10.png" alt="VacuumEffect">
-      <p class="article-title">
-        ナワバリ現象<span> 2021/3月</span>
-      </p>
-    </a>
-    
-    <a href="../11/11.htm" class="article">
-      <img class="img" src="images/11.png" alt="trapper">
-      <p class="article-title">
-        踏み板を踏まない猫<span> 2021/8月</span>
-      </p>
-    </a>
-
-    <a href="../13/13.htm" class="article">
-      <img class="img" src="images/13.png" alt="trapper">
-      <p class="article-title">
-        猫を自宅で待機させる場合の注意点<span> 2023/6月</span>
-      </p>
-    </a>    
-
+  <div class="headerSpace"></div>
+  <div class="button-wrapper">
+    <h2 class="topButton"><a href="#"></a></h2>
   </div>
+  <div class="main-container">
+    <div id="articles-container" class="main">
 
-  <div class="empty">
-    <!-- フッターとメインが被らないようにするための空div -->
-  </div>
 
-  <footer>
-    <div class="homestyle-btn">
-      <a class="home-btn" href="https://wakayamasakuraneko.github.io/clinic/index.htm">
-        <!-- target="_blank"を使うと新しいページで開く -->
-        <img class="icon" src="../icon_mikeneko64px.png">
-        和歌山スペイクリニック さくらねこ
-        <img class="icon" src="../icon_sakura.png">
+
+      <a class="article genre" data-genre="その他" href="../01/01.htm" id="01">
+        <img class="img" src="images/01.jpg" alt="sakuraneko">
+        <p class="article-title">
+          和歌山スペイクリニックの「スペイ」の意味とは？
+        </p>
+
+        <!-- <div class="read"></div> -->
+        <p class="hasshutagu">#その他</p>
       </a>
-    </div>
-    <div>
+
+      <a class="article genre" data-genre="外猫 予約？外猫" href="../02/02.htm" id="02">
+        <img class="img" src="images/02.jpg" alt="20190718">
+        <p class="article-title">
+          キャンセルを申し訳ないと思わなくても大丈夫です
+        </p>
+        <p class="hasshutagu">#外猫</p>
+      </a>
+
+      <a class="article genre" data-genre="保護猫 外猫 来院時" href="../03/03.htm" id="03">
+        <img class="img" src="images/03.jpg" alt="carry_case">
+        <p class="article-title">
+          連れて来られる際の入れ物について
+        </p>
+        <p class="hasshutagu">#保護猫 #外猫</p>
+      </a>
+
+      <a class="article genre" data-genre="保護猫" href="../04/04.htm" id="04">
+        <img class="img" src="images/04.jpg" alt="net">
+        <p class="article-title">
+          猫ちゃんを入れる洗濯ネットについて
+        </p>
+        <p class="hasshutagu">#保護猫</p>
+      </a>
+
+      <a class="article genre" data-genre="外猫 捕獲器使い方 捕獲コツ" href="../05/05.htm" id="05">
+        <img class="img" src="images/05.jpg" alt="Trap">
+        <p class="article-title">
+          捕獲器の設置方法
+        </p>
+        <p class="hasshutagu">#外猫</p>
+      </a>
+
+
+      <a class="article genre" data-genre="外猫 来院時" href="../06/06.htm" id="06">
+        <img class="img" src="images/06.png" alt="carrying">
+        <p class="article-title">
+          捕獲器で来院される際の注意補足
+        </p>
+        <p class="hasshutagu">#外猫</p>
+      </a>
+
+      <a class="article genre" data-genre="外猫 捕獲器使い方 来院時" href="../06.5/06.5.htm" id="06.5">
+        <img class="img" src="images/06.5.png" alt="06.5">
+        <p class="article-title">
+          (イラスト版)捕獲器の包み方
+        </p>
+        <p class="hasshutagu">#外猫</p>
+      </a>
+
+      <a class="article genre" data-genre="外猫 自宅待機" href="../07/07.htm" id="07">
+        <img class="img" src="images/07.jpg" alt="Temperature">
+        <p class="article-title">
+          捕獲した猫の温度管理
+        </p>
+        <p class="hasshutagu">#外猫</p>
+      </a>
+
+      <a class="article genre" data-genre="外猫 捕獲コツ" href="../08/08.htm" id="08">
+        <img class="img" src="images/08.jpg" alt="tsukamaranai">
+        <p class="article-title">
+          捕まえたい日に捕まらない！
+        </p>
+        <p class="hasshutagu">#外猫</p>
+      </a>
+
+      <a class="article genre" data-genre="外猫 捕獲器使い方" href="../09/09.htm" id="09">
+        <img class="img" src="images/09.jpg" alt="blog009pic">
+        <p class="article-title">
+          組み立て式捕獲器の注意点
+        </p>
+        <p class="hasshutagu">#外猫</p>
+      </a>
+
+      <a class="article genre" data-genre="その他" href="../10/10.htm" id="10">
+        <img class="img" src="images/10.png" alt="VacuumEffect">
+        <p class="article-title">
+          ナワバリ現象
+        </p>
+        <p class="hasshutagu">#その他</p>
+      </a>
+
+      <a class="article genre" data-genre="外猫 捕獲コツ" href="../11/11.htm" id="11">
+        <img class="img" src="images/11.png" alt="trapper">
+        <p class="article-title">
+          踏み板を踏まない猫
+        </p>
+        <p class="hasshutagu">#外猫</p>
+      </a>
+
+      <a class="article genre" data-genre="外猫 自宅待機" href="../13/13.htm" id="13">
+        <img class="img" src="images/13.png" alt="trapper">
+        <p class="article-title">
+          猫を自宅で待機させる場合の注意点
+        </p>
+        <p class="hasshutagu">#外猫</p>
+      </a>
 
     </div>
+  </div>
+
+  <!-- <ol class=" over-y">
+        <p class="TOC">目次</p>
+        <li><a href="#01" class="TOCjump">「スペイ」の意味とは？</a></li>
+        <li><a href="#02" class="TOCjump">キャンセルを申し訳ないと思わなくても大丈夫です</a></li>
+        <li><a href="#03" class="TOCjump">連れて来られる際の入れ物について</a></li>
+        <li><a href="#04" class="TOCjump">猫ちゃんを入れる洗濯ネット</a></li>
+        <li><a href="#05" class="TOCjump">捕獲器の設置方法</a></li>
+        <li><a href="#06" class="TOCjump">捕獲器で来院される際の注意補足</a></li>
+        <li><a href="#06.5" class="TOCjump">(イラスト版)捕獲器の包み方</a></li>
+        <li><a href="#07" class="TOCjump">捕獲した猫の温度管理</a></li>
+        <li><a href="#08" class="TOCjump">捕まえたい日に捕まらない！</a></li>
+        <li><a href="#09" class="TOCjump">組み立て式捕獲器の注意点</a></li>
+        <li><a href="#10" class="TOCjump">ナワバリ現象</a></li>
+        <li><a href="#11" class="TOCjump">踏み板を踏まない猫</a></li>
+        <li><a href="#13" class="TOCjump">猫を自宅で待機させる場合の注意点</a></li>
+      </ol> -->
+
+  <footer class="footer-bottom">
+    和歌山スペイクリニック さくらねこ
   </footer>
 
+
+  <!-- <script src="js/genre2.js"></script> -->
+  <script src="js/genre4.js"></script>
+  <!-- <script src="js/hmb_acd.js"></script> -->
+  <script src="js/original_ryaku.js"></script>
 </body>
 
 </html>
