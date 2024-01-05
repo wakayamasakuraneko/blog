@@ -40,6 +40,10 @@ img {
   width: 100%;
 }
 
+.frame img {
+  display: block;
+}
+
 @media screen and (max-width: 630px) {
   .frame {
     width: calc(70% - 1vw);
