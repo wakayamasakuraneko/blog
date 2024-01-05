@@ -1,0 +1,55 @@
+/* ==========================
+「ホームへ」ボタン周辺
+========================== */
+
+footer {
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 20px;
+}
+
+.home-btn {
+  /* PC */
+  font-size: 35px;
+  border: solid 2px #bb9200;
+  background-color: #ffc90d;
+  color: #ffffff;
+
+  text-decoration: none;
+  opacity: 0.8;
+  border-radius: 4px;
+  padding: 3px 15px;
+  display: inline-block;
+  transition: all .3s ease-out;
+}
+
+.home-btn:hover {
+  transform: scale(1.03, 1.1);
+  background-color: #e7b500;
+}
+
+.icon {
+  /* 三毛猫と桜のアイコン */
+  margin-bottom: -3px;
+  width: 35px;
+}
+
+.sakuseikousin {
+  text-align: right;
+}
+
+/* ======================
+スマホ用
+========================*/
+
+@media screen and (max-width: 769px) {
+  .home-btn {
+    font-size: 25px;
+  }
+
+  /* 三毛猫と桜のアイコン */
+  .icon {
+    margin-bottom: -0.5vw;
+    width: 25px;
+  }
+}
