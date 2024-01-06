@@ -4,7 +4,6 @@
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
-  text-align: center;
   /* display: table; */
   /* display: table のコードの存在を知らず1年以上bodyの範囲を指定出来なかった */
   /* 何で知ったか全然覚えてない */
@@ -13,6 +12,7 @@
 
 a {
   text-decoration: none;
+  text-align: center;
   color: black;
   transition: 0.3s;
 }
