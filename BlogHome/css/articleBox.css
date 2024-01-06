@@ -5,7 +5,6 @@
   flex-wrap: wrap;
   padding: 10px;
   text-align: center;
-  margin-top: -6.5rem;
   /* display: table; */
   /* display: table のコードの存在を知らず1年以上bodyの範囲を指定出来なかった */
   /* 何で知ったか全然覚えてない */
@@ -51,8 +50,8 @@ a {
 }
 
 img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .article-title {
