@@ -28,8 +28,10 @@ footer {
   background-color: #e7b500;
 }
 
+/* 三毛猫と桜のアイコン */
+/* imgを他のcssで  display: block;にしているため段落扱いになってしまうのを補正 */
 .icon {
-  /* 三毛猫と桜のアイコン */
+  display: inline;
   margin-bottom: -3px;
   width: 35px;
 }
