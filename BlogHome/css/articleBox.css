@@ -12,6 +12,12 @@
   /* …が、結局お蔵入り */
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
 .article {
   /* イメージとタイトル、その下の文字まで含む */
   width: calc(25% - 2vw);
@@ -39,15 +45,14 @@
   transition: visibility 0.2s ease;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-  transition: 0.3s;
-}
-
 .article:hover {
   transform: scale(1.05);
   /* opacity: 0.6; */
+}
+
+img {
+    display: block;
+    width: 100%;
 }
 
 .article-title {
