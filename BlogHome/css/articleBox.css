@@ -10,7 +10,7 @@
   /* …が、結局お蔵入り */
 }
 
-a {
+.main a {
   text-decoration: none;
   text-align: center;
   color: black;
