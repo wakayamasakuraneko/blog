@@ -140,7 +140,9 @@
 
   /* .gnavlink, */
   .nav_list>li {
-    /* padding-bottom: 0px; */
+    /* 参考：z-indexが下の要素も上の要素もクリックできるようにする */
+    /* https://haayaaa.hatenablog.com/entry/2019/03/07/204958 */
+    pointer-events: auto;
     border-bottom: 0px;
   }
 
@@ -163,6 +165,7 @@
   }
 
   .gnav {
+    pointer-events: none;
     padding-top: 0px;
     padding-bottom: 0px;
   }
