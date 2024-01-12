@@ -73,7 +73,10 @@
 
   .acdn.-active {
     position: relative;
-    z-index: 10;
+    /* 参考：z-indexが下の要素も上の要素もクリックできるようにする */
+    /* https://haayaaa.hatenablog.com/entry/2019/03/07/204958 */
+    pointer-events: auto;
+    /* z-index: 2; */
     /* margin-top: 2.5em; */
     padding-top: 5em;
     margin-top: -2.5em;
