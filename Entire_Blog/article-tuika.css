@@ -1,0 +1,19 @@
+.main {
+  justify-content: center;
+  padding: 0;
+}
+
+
+/* イメージとタイトル、その下の文字まで含む */
+.article {
+  max-width: 400px;
+  width: calc(40% - 2vw);
+}
+
+
+@media screen and (max-width: 600px) {
+  .article {
+    width: calc(50% - 4vw);
+    margin: 2vw;
+  }
+}
