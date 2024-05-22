@@ -127,7 +127,7 @@ td {
 
     /* パネルごとのイラスト */
     .panel-content img {
-        max-width: 350px;
+/*         max-width: 350px; */
         width: 100%;
         margin: auto;
     }
