@@ -1,0 +1,54 @@
+/* 画像に文字を重ねる */
+
+/* .image-container {
+    position: relative;
+    display: block;
+} */
+
+.image-text,
+.image-text2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+
+    font-size: 20px;
+    text-shadow:
+        -2px -2px 0 rgb(54, 111, 1),
+        2px -2px 0 rgb(54, 111, 1),
+        -2px 2px 0 rgb(54, 111, 1),
+        2px 2px 0 rgb(54, 111, 1);
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.image-text {
+    /* top: 0; */
+    padding-top: 3%;
+}
+
+.image-text2 {
+    /* bottom: 0; */
+    padding-top: 60%;
+}
+
+.no-shadow {
+    text-shadow: none;
+}
+
+
+@media (max-width: 580px) {
+
+    .image-text,
+    .image-text2 {
+        font-size: 3vw;
+        /* text-shadow:
+            -1px -1px 0 blue,
+            1px -1px 0 blue,
+            -1px 1px 0 blue,
+            1px 1px 0 blue;
+        letter-spacing: 0px; */
+    }
+}
